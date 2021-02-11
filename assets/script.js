@@ -1,19 +1,19 @@
 const items =[
     {
         id: 0,
-        nome: "camiseta",
+        nome: "Camiseta",
         img:"img/camiseta.jpg",
         quantidade: 0
     },   
     {
         id: 1,
-        nome: "shorts",
+        nome: "Shorts",
         img:"img/shorts.jpg",
         quantidade: 0
     },   
     {
         id: 2,
-        nome: "sapato",
+        nome: "Sapato",
         img:"img/sapato.jpg",
         quantidade: 0
     } ,  
@@ -41,10 +41,13 @@ const items =[
     items.map((val) =>{
         if(val.quantidade > 0){
         containerCarrinho.innerHTML += `
+        <div class= "info-single-checkout">
         
-        <p>`+val.nome+` | quatidade: `+val.quantidade+`</p>
+        <p style="float:left;">Produto: `+val.nome+` </p>
+        <p style="float:right;">Quatidade: `+val.quantidade+`</p>
+        <div style= "clear:both"></div>
         <hr>
-
+            </div>
         `;
     }
         
